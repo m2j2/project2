@@ -6,19 +6,19 @@
       <meta charset="utf-8"/>
       <link rel="stylesheet" href="../css/style.css">
     </head>
+    
     <header>
       <img src="../img/header_blk_red.jpg" alt="header">
-      
       <ul id="nav">
         <li><a href="../index.html">Home</a></li>
         <li><a href="../registration/index.html">Registration</a></li>
-        <li><a href="../crn/index.html">Add/Drop Classes</a></li>
+        <li><a href="../CRN.html">Add/Drop Classes</a></li>
       </ul>
     </header>
     
     <body>    
       <div class="register">
-        <form method="GET" action="#null" enctype="multipart/form-data">
+        <form method="GET" action="../CRN.html" enctype="multipart/form-data">
           <fieldset>
             <p>
               <label for="pin">Enter pin:</label>
@@ -45,11 +45,12 @@
               <label for="acknowledge">I have read, understand and agree to my Financial Responsibility with IIT.</label>
               <input id="acknowledge" type="checkbox" name="user_name">
             </p>
+            
+            <p class="button">
+              <input type="submit" value="Submit" onclick="return Validate()" id="submit">
+            </p>
           </fieldset>
           
-          <p class="button">
-            <input type="submit" value="Submit" onclick="return Validate()" id="submit">
-          </p>
         </form>
       </div>
     </body>
