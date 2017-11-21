@@ -45,10 +45,10 @@ body{
 }
 #confirmpage h1{
 	font-size:4.5em;
-	
+
 }
 #confirmpage p{
-	
+
 }
 
 hr{
@@ -83,17 +83,16 @@ html {
 
 fieldset
 {
-	text-align: center;
+  text-align: center;
   font-family: "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 20px;
-
   line-height: 1.6em;
   letter-spacing: .5px;
   background: #b62020;
   border:0;
   padding: 10px;
   display: block;
-
+	color: white;
 }
 .center {
     padding: 10px;
@@ -162,8 +161,7 @@ li a:hover:not(.active) {
     width: 75%;
   }
 }
-
-label{
+#label{
 	font-family: Didot, 'Didot LT STD', 'Hoefler Text', Garamond, 'Times New Roman', serif;
 	color: black;
 	text-align: left;
