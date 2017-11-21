@@ -112,11 +112,16 @@ form input[type='text'],form textarea {
   outline-width: 0;
 }
 
-#nav{
-text-align: center;
-list-style:none;
-position: absolute;
-}
+  #nav{
+    list-style:none;
+  }
+  
+  #nav ul li{
+    display: block;
+    float: left;
+    position: absolute;
+    width: 33%;
+  }
 
 ul {
     list-style-type: none;
@@ -124,7 +129,6 @@ ul {
     padding: 0;
     overflow: hidden;
     background-color: #333;
-    text-align: center;
 }
 
 li {
