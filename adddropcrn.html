@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" class="nojs">
     <link rel="icon" type="image/jpg" href="http://mypages.iit.edu/~cxie9/project_3_team/iiticon.png">
-        <title>|MyIIT|</title>
+        <title>MYIIT-Add/Drop</title>
   <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0,shrink-to-fit=no" />
     <link rel="stylesheet" media="screen" href="css/style.css" />
@@ -25,18 +25,18 @@
             <h1 id="title">Add Classes Worksheet</h1>
 
             <h1 id="title2">CRNs</h1>
-
+						<p> All CRNs must be 5 number length </p>
                    
                     <form name="myform" method="get" action="confirm.html" onsubmit="tosubmit();">
                     <div id="labels">
-                        <label><input id="CRN_Code1"type="text" name="CRN_Code1" size=15 maxlength=5 value="" required=""></label>
-                        <label><input id="CRN_Code2"type="text" name="CRN_Code2" size=15 maxlength=5 value="" required=""></label>
-                        <label><input id="CRN_Code3"type="text" name="CRN_Code3" size=15 maxlength=5 value="" required=""></label>
-                        <label><input id="CRN_Code4"type="text" name="CRN_Code4" size=15 maxlength=5 value="" required=""></label>
-                        <label><input id="CRN_Code5"type="text" name="CRN_Code5" size=15 maxlength=5 value="" required=""></label>
-                        <label><input id="CRN_Code6"type="text" name="CRN_Code6" size=15 maxlength=5 value="" required=""></label>
-                        <label><input id="CRN_Code7"type="text" name="CRN_Code7" size=15 maxlength=5 value="" required=""></label>
-                        <label><input id="CRN_Code8"type="text" name="CRN_Code8" size=15 maxlength=5 value="" required=""></label>
+                        <label><input id="CRN_Code1"type="text" name="CRN_Code1" pattern="[0-9]{5}" value="" required=""></label>
+                        <label><input id="CRN_Code2"type="text" name="CRN_Code2" pattern="[0-9]{5}" value="" ></label>
+                        <label><input id="CRN_Code3"type="text" name="CRN_Code3" pattern="[0-9]{5}"  value="" ></label>
+                        <label><input id="CRN_Code4"type="text" name="CRN_Code4" pattern="[0-9]{5}"  value="" ></label>
+                        <label><input id="CRN_Code5"type="text" name="CRN_Code5" pattern="[0-9]{5}"  value="" ></label>
+                        <label><input id="CRN_Code6"type="text" name="CRN_Code6" pattern="[0-9]{5}"  value="" ></label>
+                        <label><input id="CRN_Code7"type="text" name="CRN_Code7" pattern="[0-9]{5}"  value="" ></label>
+                        <label><input id="CRN_Code8"type="text" name="CRN_Code8" pattern="[0-9]{5}"  value="" ></label>
                     </div>
 										
                 <fieldset id="submit">
@@ -63,14 +63,8 @@
 						var CRN_Code7 = document.getElementById("CRN_Code7").value;
 						var CRN_Code8 = document.getElementById("CRN_Code8").value;
             // Storing the value above into localStorage
-            localStorage.setItem('CRN_Code1');
-						localStorage.setItem('CRN_Code2');
-						localStorage.setItem('CRN_Code3');
-						localStorage.setItem('CRN_Code4');
-						localStorage.setItem('CRN_Code5');
-						localStorage.setItem('CRN_Code6');
-						localStorage.setItem('CRN_Code7');
-						localStorage.setItem('CRN_Code8');
+            var myData = [CRN_Code1,CRN_Code2,CRN_Code3,CRN_Code4,CRN_Code5,CRN_Code6,CRN_Code7,CRN_Code8];
+						localStorage.setItem('objectToPass', myData);
             return true;
         }
 
