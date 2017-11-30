@@ -160,10 +160,8 @@ li a:hover:not(.active) {
 
 @media screen and (min-width: 768px) {
 	
-	#confirmpage{
-		h1 {
-			font-size: 2.5em;
-		}
+	#confirmpage h1{
+			font-size:2.5em;
 	}
 
   .submit {
