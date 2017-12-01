@@ -1,30 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-    <title>Project 3::Registration Confirmation Page</title>
+    <title>MYIIT-Confirmation Page</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="css/style.css">
-    <script type="text/javascript" src="script.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
 	</head>
   
   <header>
-    <img src="img/header_blk_red.jpg" alt="header">
+    <a href="index.html"><img src="img/header_blk_red.jpg" alt="header"></a>
   </header>
  
 	<body id="confirmpage" onload="init()">
 		<h1>Your Registration is Complete!</h1>
 		<p>You are now attending the following courses for next semester</p>
 		<p>Below are the CRNs you have entered into the Add/Drop page:</p>
+		<p id="crnData"></p>
 		<hr>
-		<p><strong>Please contact us</strong>for any questions regarding your registration</p>
-		<p><a href="">Contact Us</a></p>
+		<p><strong>Please contact us </strong>for any questions regarding your registration</p>
+		<a href="">Contact Us</a>
 		<p id="date"></p>
 	</body>
 <script>
 function init()
 {
-				//Retrieving the text input's value which was stored into localStorage
+				var myData = localStorage['objectToPass'];
+				
+				
+				var CRN_Code1 = myData[0] + +myData[1]+ myData[2] + myData[3]+myData[4];
+				var CRN_Code2 = myData[6] + myData[7] + myData[8] + myData[9]+myData[10];
+				var CRN_Code3 = myData[12] + myData[13] + myData[14] + myData[15]+myData[16];
+				var CRN_Code4 = myData[18] + myData[19] + myData[20] + myData[21]+myData[22];
+				var CRN_Code5 = myData[24] + myData[25] + myData[26] + myData[27]+myData[28];
+				var CRN_Code6 = myData[30] + myData[31] + myData[32] + myData[33]+myData[34];
+				var CRN_Code7 = myData[36] + myData[37] + myData[38] + myData[39]+myData[40];
+				var CRN_Code8 = myData[42] + myData[43] + myData[44] + myData[45]+myData[46];
+				
+				if(CRN_Code2 == null) { CRN_Code2 = null; }
+				if(CRN_Code3 == null) { CRN_Code3 = null; }
+				if(CRN_Code4 == null) { CRN_Code4 = null; }
+				if(CRN_Code5 == null) { CRN_Code5 = null; }
+				if(CRN_Code6 == null) { CRN_Code6 = null; }
+				if(CRN_Code7 == null) { CRN_Code7 = null; }
+				if(CRN_Code8 == null) { CRN_Code8 = null; }
+				
+				
+				
+				document.getElementById("crnData").innerHTML = "CRN entered: " + CRN_Code1 + "," + CRN_Code2 + "," + CRN_Code3+ "," + CRN_Code4 + "," + CRN_Code5+ "," + CRN_Code6 + "," + CRN_Code7+ "," + CRN_Code8;
+				
+				/*Retrieving the text input's value which was stored into localStorage
         var CRN_Code1 = localStorage.getItem("CRN_Code1");
 				var CRN_Code2 = localStorage.getItem("CRN_Code2");
 				var CRN_Code3 = localStorage.getItem("CRN_Code3");
@@ -41,7 +65,7 @@ function init()
 				document.write(" Course  5 CRN = "+CRN_Code5);	
 				document.write(" Course  6 CRN = "+CRN_Code6);	
 				document.write(" Course  7 CRN = "+CRN_Code7);
-				document.write(" Course  8 CRN = "+CRN_Code8);					
+				document.write(" Course  8 CRN = "+CRN_Code8);	*/				
 
 document.getElementById("date").innerHTML = Date();
 }
